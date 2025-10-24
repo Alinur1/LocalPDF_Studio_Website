@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alinur1.github.io/LocalPDF_Studio_Website/sitemap.xml
