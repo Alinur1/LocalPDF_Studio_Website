@@ -168,6 +168,14 @@ body {
     line-height: 1.8;
 }
 
+.hero-slogan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--danger);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
 .hero-features {
     display: flex;
     gap: 2rem;

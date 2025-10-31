@@ -77,6 +77,11 @@ function initAnimations() {
             opacity: 0,
             duration: 0.6
         }, '-=0.4')
+        .from('.hero-slogan', {
+            y: 30,
+            opacity: 0,
+            duration: 0.6
+        }, '-=0.4')
         .from('.hero-feature', {
             x: -30,
             opacity: 0,
