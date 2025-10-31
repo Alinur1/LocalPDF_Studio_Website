@@ -28,6 +28,28 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Build and cache-bust
+        run: |
+          # Cache bust CSS
+          CSS_HASH=$(md5sum css/main.css | cut -d ' ' -f 1)
+          DONATE_CSS_HASH=$(md5sum css/donate.css | cut -d ' ' -f 1)
+          mv css/main.css css/main.$CSS_HASH.css
+          mv css/donate.css css/donate.$DONATE_CSS_HASH.css
+
+          # Cache bust JS
+          JS_HASH=$(md5sum js/main.js | cut -d ' ' -f 1)
+          DONATE_JS_HASH=$(md5sum js/donate.js | cut -d ' ' -f 1)
+          mv js/main.js js/main.$JS_HASH.js
+          mv js/donate.js js/donate.$DONATE_JS_HASH.js
+
+          # Update index.html
+          sed -i "s|css/main.css|css/main.$CSS_HASH.css|g" index.html
+          sed -i "s|js/main.js|js/main.$JS_HASH.js|g" index.html
+
+          # Update donate.html
+          sed -i "s|css/donate.css|css/donate.$DONATE_CSS_HASH.css|g" html/donate.html
+          sed -i "s|js/donate.js|js/donate.$DONATE_JS_HASH.js|g" html/donate.html
+
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
