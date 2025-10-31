@@ -47,8 +47,9 @@ jobs:
           sed -i "s|js/main.js|js/main.$JS_HASH.js|g" index.html
 
           # Update donate.html
-          sed -i "s|css/donate.css|css/donate.$DONATE_CSS_HASH.css|g" html/donate.html
-          sed -i "s|js/donate.js|js/donate.$DONATE_JS_HASH.js|g" html/donate.html
+          sed -i "s|../css/main.css|../css/main.$CSS_HASH.css|g" html/donate.html
+          sed -i "s|../css/donate.css|../css/donate.$DONATE_CSS_HASH.css|g" html/donate.html
+          sed -i "s|../js/donate.js|../js/donate.$DONATE_JS_HASH.js|g" html/donate.html
 
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
