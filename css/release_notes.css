@@ -1,0 +1,101 @@
+/* css/release_notes.css */
+
+.release-notes-page .release-notes-hero {
+    padding: 120px 0 60px;
+    text-align: center;
+    background: var(--secondary-bg);
+}
+
+.release-notes-page .hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.release-notes-page .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.release-list-section {
+    padding: 60px 0;
+}
+
+.release-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.release-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.release-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.release-header:hover {
+    background-color: #34495e;
+}
+
+.version-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex-grow: 1;
+}
+
+.release-date {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-right: 1.5rem;
+}
+
+.version-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent-blue);
+    transition: transform 0.3s ease;
+}
+
+.release-item.open .version-toggle {
+    transform: rotate(45deg);
+}
+
+.release-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.release-notes {
+    padding: 0 2rem 2rem;
+    color: var(--text-secondary);
+}
+
+.release-notes h3 {
+    font-size: 1.25rem;
+    color: var(--accent-blue);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.release-notes ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.release-notes li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
