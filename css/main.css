@@ -554,63 +554,6 @@ section {
     margin: 0.5rem 0;
 }
 
-/* Developer Section */
-.developer-section {
-    background: var(--secondary-bg);
-}
-
-.developer-card {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 3rem;
-    border-radius: 15px;
-    border: 1px solid var(--border-color);
-    opacity: 0;
-}
-
-.developer-info h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.developer-info p {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.love-message {
-    color: var(--accent-blue);
-    font-style: italic;
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-}
-
-.developer-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.dev-link {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--accent-blue);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.dev-link:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-}
-
 /* Support Section */
 .support-section {
     background: linear-gradient(135deg, var(--card-bg) 0%, var(--primary-bg) 100%);

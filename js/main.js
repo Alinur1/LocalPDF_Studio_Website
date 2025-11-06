@@ -199,18 +199,6 @@ function initAnimations() {
         });
     });
 
-    // Developer card animation
-    gsap.to('.developer-card', {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        scrollTrigger: {
-            trigger: '.developer-card',
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-
     // Section titles animation
     gsap.utils.toArray('.section-title').forEach(title => {
         gsap.from(title, {
