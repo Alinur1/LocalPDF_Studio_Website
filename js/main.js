@@ -328,7 +328,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initMobileMenu();
 
-    console.log('LocalPDF Studio Website initialized');
+    const video = document.getElementById('demoVideo');
+
+    if (video) {
+        video.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            video.controls = !video.controls;
+        });
+
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }
+
+   
 });
 
 // Handle window resize
@@ -339,3 +356,17 @@ window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     }, 250);
 });
+
+// GSAP fade-in animation for video section
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.from(".video-showcase", {
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".video-showcase",
+      start: "top 80%",
+    },
+  });
+});
+
