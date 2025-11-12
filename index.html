@@ -316,7 +316,7 @@
                     <h3>Linux</h3>
                     <p>Ubuntu, Debian, Fedora, etc.</p><br />
                     <a href="https://github.com/Alinur1/LocalPDF_Studio/releases/download/v0.0.5/LocalPDF-Studio-linux.AppImage"
-                        class="btn btn-download" data-platform="linux">
+                        class="btn btn-download" data-platform="linux" id="linux-appimage-download-btn">
                         <span>Download .AppImage (v0.0.5)</span>
                     </a>
                     <p></p>
@@ -328,7 +328,7 @@
                     <div class="platform-icon">🍎</div>
                     <h3>macOS</h3>
                     <p>Intel chips only. Use Rosetta for Apple silicon chips</p>
-                    <a href="https://github.com/Alinur1/LocalPDF_Studio/releases/download/v0.0.5/LocalPDF-Studio-mac.dmg"
+                    <a href="https://github.com/Alinur1/LocalPDF_Studio/releases/download/v0.0.5/LocalPDF-Studio-mac.dmg" id="macos-dmg-download-btn"
                         class="btn btn-download" data-platform="macos">
                         <span>Download .dmg (v0.0.5)</span>
                     </a>
@@ -379,6 +379,57 @@
             </div>
         </div>
     </footer>
+
+    <!-- AppImage Info Modal -->
+    <div id="appimage-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Important for AppImage Users</h2>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>You will not be able to run the <code>.AppImage</code> file immediately after downloading.</p>
+                <p>You need to make the software executable using the following command in your terminal:</p>
+                <div class="command-box">
+                    <code id="appimage-command">chmod +x LocalPDF-Studio-linux.AppImage</code>
+                    <button class="copy-btn" data-command="chmod +x LocalPDF-Studio-linux.AppImage">Copy</button>
+                </div>
+                <p class="modal-note">
+                    Please replace <code>LocalPDF-Studio-linux.AppImage</code> with the actual downloaded filename if it differs (e.g., due to renaming).
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary modal-close-btn">Got It!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- macOS Info Modal -->
+    <div id="macos-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How to install/update LocalPDF Studio on macOS</h2>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ol class="modal-list">
+                    <li>Install the <code>.dmg</code> file.</li>
+                    <li>Open it, and drag the application to your Applications folder.</li>
+                    <li>Go to <strong>Settings</strong> &rarr; <strong>Privacy & Security</strong>.</li>
+                    <li>Scroll down to the "Security" section. You will see a message that "LocalPDF Studio was blocked from use because it is not from an identified developer."</li>
+                    <li>Click the "Open Anyway" button.</li>
+                    <li>A confirmation dialog will appear. Click "Open" again.</li>
+                    <li>Enter your password if prompted and click OK.</li>
+                </ol>
+                <p class="modal-note">
+                    <strong>Note:</strong> This software is built for Intel chips. Apple Silicon users will need to use Rosetta.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary modal-close-btn">Got It!</button>
+            </div>
+        </div>
+    </div>
 
     <!-- GSAP Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

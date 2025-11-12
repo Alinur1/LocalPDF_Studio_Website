@@ -345,7 +345,97 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-   
+    // AppImage Modal Logic
+    const appimageDownloadBtn = document.getElementById('linux-appimage-download-btn');
+    const appimageModal = document.getElementById('appimage-modal');
+    const modalCloseButtons = appimageModal ? appimageModal.querySelectorAll('.modal-close-btn') : [];
+    const copyCommandBtn = document.querySelector('#appimage-modal .copy-btn');
+    const appimageCommandElement = document.getElementById('appimage-command');
+
+    if (appimageDownloadBtn && appimageModal) {
+        appimageDownloadBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default navigation/download
+
+            // Trigger the download programmatically
+            const downloadLink = this.href;
+            const filename = downloadLink.substring(downloadLink.lastIndexOf('/') + 1);
+
+            // Create a temporary anchor element to trigger download
+            const tempLink = document.createElement('a');
+            tempLink.href = downloadLink;
+            tempLink.download = filename; // Suggest filename
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+
+            // Update the command in the modal with the correct filename
+            if (appimageCommandElement && copyCommandBtn) {
+                appimageCommandElement.textContent = `chmod +x ${filename}`;
+                copyCommandBtn.dataset.command = `chmod +x ${filename}`;
+            }
+
+            // Show the modal
+            appimageModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+        });
+
+        modalCloseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                appimageModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        });
+
+        if (copyCommandBtn) {
+            copyCommandBtn.addEventListener('click', async () => {
+                const commandToCopy = copyCommandBtn.dataset.command;
+                try {
+                    await navigator.clipboard.writeText(commandToCopy);
+                    const originalText = copyCommandBtn.textContent;
+                    copyCommandBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyCommandBtn.textContent = originalText;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy command: ', err);
+                    alert('Failed to copy command. Please copy it manually: ' + commandToCopy);
+                }
+            });
+        }
+    }
+
+    // macOS Modal Logic
+    const macosDownloadBtn = document.getElementById('macos-dmg-download-btn');
+    const macosModal = document.getElementById('macos-modal');
+    const macosModalCloseButtons = macosModal ? macosModal.querySelectorAll('.modal-close-btn') : [];
+
+    if (macosDownloadBtn && macosModal) {
+        macosDownloadBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default navigation/download
+
+            // Trigger the download programmatically
+            const downloadLink = this.href;
+            const filename = downloadLink.substring(downloadLink.lastIndexOf('/') + 1);
+
+            const tempLink = document.createElement('a');
+            tempLink.href = downloadLink;
+            tempLink.download = filename;
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+
+            // Show the modal
+            macosModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+        });
+
+        macosModalCloseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                macosModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        });
+    }
 });
 
 // Handle window resize
@@ -369,4 +459,3 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
-
