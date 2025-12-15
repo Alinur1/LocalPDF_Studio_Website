@@ -1,0 +1,288 @@
+/* css/privacy_policy.css */
+
+.privacy-page {
+    padding-top: 80px;
+}
+
+/* Privacy Hero */
+.privacy-hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--primary-bg) 100%);
+    text-align: center;
+}
+
+.shield-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    animation: shieldPulse 2s ease-in-out infinite;
+}
+
+@keyframes shieldPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.privacy-hero .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.privacy-hero .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Privacy Commitment Section */
+.privacy-commitment-section {
+    padding: 80px 0;
+    background: var(--secondary-bg);
+}
+
+.commitment-message {
+    text-align: center;
+    padding: 3rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.commitment-message p {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Privacy Points Section */
+.privacy-points-section {
+    padding: 80px 0;
+    background: var(--primary-bg);
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.privacy-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.privacy-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.3);
+}
+
+.privacy-card.featured-card {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
+}
+
+.privacy-card.featured-card:hover {
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+}
+
+.privacy-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.privacy-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.privacy-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Transparency Section */
+.transparency-section {
+    padding: 80px 0;
+    background: var(--secondary-bg);
+}
+
+.transparency-contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.transparency-card {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid var(--accent-blue);
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.transparency-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.transparency-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.transparency-btn {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.transparency-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--secondary-bg);
+}
+
+.contact-card {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid var(--accent-blue);
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+}
+
+.contact-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+}
+
+.contact-btn.secondary-btn {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.contact-btn.secondary-btn:hover {
+    background: var(--accent-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .privacy-hero .hero-title {
+        font-size: 2rem;
+    }
+
+    .shield-icon {
+        font-size: 3.5rem;
+    }
+
+    .privacy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transparency-contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .transparency-card,
+    .contact-card {
+        padding: 2rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .transparency-btn {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .nav-links .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+}

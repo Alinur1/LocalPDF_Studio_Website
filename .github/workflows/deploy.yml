@@ -34,17 +34,21 @@ jobs:
           CSS_HASH=$(md5sum css/main.css | cut -d ' ' -f 1)
           DONATE_CSS_HASH=$(md5sum css/donate.css | cut -d ' ' -f 1)
           RELEASE_NOTES_CSS_HASH=$(md5sum css/release_notes.css | cut -d ' ' -f 1)
+          PRIVACY_POLICY_CSS_HASH=$(md5sum css/privacy_policy.css | cut -d ' ' -f 1)
           mv css/main.css css/main.$CSS_HASH.css
           mv css/donate.css css/donate.$DONATE_CSS_HASH.css
           mv css/release_notes.css css/release_notes.$RELEASE_NOTES_CSS_HASH.css
+          mv css/privacy_policy.css css/privacy_policy.$PRIVACY_POLICY_CSS_HASH.css
 
           # Cache bust JS
           JS_HASH=$(md5sum js/main.js | cut -d ' ' -f 1)
           DONATE_JS_HASH=$(md5sum js/donate.js | cut -d ' ' -f 1)
           RELEASE_NOTES_JS_HASH=$(md5sum js/release_notes.js | cut -d ' ' -f 1)
+          PRIVACY_POLICY_JS_HASH=$(md5sum js/privacy_policy.js | cut -d ' ' -f 1)
           mv js/main.js js/main.$JS_HASH.js
           mv js/donate.js js/donate.$DONATE_JS_HASH.js
           mv js/release_notes.js js/release_notes.$RELEASE_NOTES_JS_HASH.js
+          mv js/privacy_policy.js js/privacy_policy.$PRIVACY_POLICY_JS_HASH.js
 
           # Update index.html
           sed -i "s|css/main.css|css/main.$CSS_HASH.css|g" index.html
@@ -59,6 +63,11 @@ jobs:
           sed -i "s|../css/main.css|../css/main.$CSS_HASH.css|g" html/release_notes.html
           sed -i "s|../css/release_notes.css|../css/release_notes.$RELEASE_NOTES_CSS_HASH.css|g" html/release_notes.html
           sed -i "s|../js/release_notes.js|../js/release_notes.$RELEASE_NOTES_JS_HASH.js|g" html/release_notes.html
+
+          # Update privacy_policy.html
+          sed -i "s|../css/main.css|../css/main.$CSS_HASH.css|g" html/privacy_policy.html
+          sed -i "s|../css/privacy_policy.css|../css/privacy_policy.$PRIVACY_POLICY_CSS_HASH.css|g" html/privacy_policy.html
+          sed -i "s|../js/privacy_policy.js|../js/privacy_policy.$PRIVACY_POLICY_JS_HASH.js|g" html/privacy_policy.html
 
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
