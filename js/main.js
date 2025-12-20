@@ -110,6 +110,15 @@ function initAnimations() {
         ease: 'back.out(1.7)'
     });
 
+    gsap.from('.hero-meme', {
+        opacity: 0,
+        scale: 0.6,
+        rotate: -8,
+        duration: 0.9,
+        delay: 1.0,
+        ease: 'back.out(1.7)'
+    });
+
     // Floating animation for PDF cards
     gsap.to('.card-1', {
         y: -20,
