@@ -34,6 +34,11 @@ class DonationManager {
         if (gumroadBtn) {
             gumroadBtn.addEventListener('click', () => this.openGumroad());
         }
+
+        const fundraisingBtn = document.getElementById('show-fundraising-sheet');
+        if (fundraisingBtn) {
+            fundraisingBtn.addEventListener('click', () => this.openExternal('https://docs.google.com/spreadsheets/d/1dZtq7XCQ-jI0-ib7mR5trBLqtb9JuRKXkMFP6O41z3E/edit?usp=sharing'));
+        }
     }
 
     setupSupportHandlers() {
@@ -41,7 +46,8 @@ class DonationManager {
             'alt-star': () => this.openExternal('https://github.com/Alinur1/LocalPDF_Studio'),
             'alt-share': () => this.shareApp(),
             'alt-report': () => this.openExternal('https://github.com/Alinur1/LocalPDF_Studio/issues'),
-            'alt-suggest': () => this.openExternal('https://github.com/Alinur1/LocalPDF_Studio/issues/new?template=feature_request.md')
+            'alt-suggest': () => this.openExternal('https://github.com/Alinur1/LocalPDF_Studio/issues/new?template=feature_request.md'),
+            'show-fundraising-sheet': () => this.openExternal('https://docs.google.com/spreadsheets/d/1dZtq7XCQ-jI0-ib7mR5trBLqtb9JuRKXkMFP6O41z3E/edit?usp=sharing')
         };
 
         Object.entries(actions).forEach(([id, action]) => {
