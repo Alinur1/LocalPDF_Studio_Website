@@ -30,9 +30,14 @@ class DonationManager {
             bkashBtn.addEventListener('click', () => this.showBkashQR());
         }
 
-        const gumroadBtn = document.getElementById('gumroad-donate');
-        if (gumroadBtn) {
-            gumroadBtn.addEventListener('click', () => this.openGumroad());
+        const gumroadOneTimeBtn = document.getElementById('gumroad-donate-onetime');
+        if (gumroadOneTimeBtn) {
+            gumroadOneTimeBtn.addEventListener('click', () => this.openOnetimeGumroad());
+        }
+
+        const gumroadMonthlyBtn = document.getElementById('gumroad-donate-monthly');
+        if (gumroadMonthlyBtn) {
+            gumroadMonthlyBtn.addEventListener('click', () => this.openMonthlyGumroad());
         }
 
         const fundraisingBtn = document.getElementById('show-fundraising-sheet');
@@ -111,8 +116,12 @@ class DonationManager {
         }
     }
 
-    openGumroad() {
+    openOnetimeGumroad() {
         this.openExternal('https://alinur3.gumroad.com/coffee');
+    }
+
+    openMonthlyGumroad() {
+        this.openExternal('https://alinur3.gumroad.com/l/csbhxr');
     }
 
     async shareApp() {
