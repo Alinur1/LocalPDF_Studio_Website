@@ -37,13 +37,75 @@
 
     <main class="donate-page">
         <!-- Hero Section -->
-        <section class="donate-hero">
+        <!-- <section class="donate-hero">
             <div class="container">
                 <div class="heart-icon">❤️</div>
                 <h1 class="hero-title">Support Our Mission</h1>
                 <p class="hero-subtitle">Help us keep LocalPDF Studio free, open-source, and continuously improving</p>
             </div>
+        </section> -->
+
+            <!-- Donation Options Section -->
+        <section class="donation-options-section">
+            <div class="container">
+                <h2 class="section-title">Choose Your Donation Method</h2>
+                <div class="donation-options">
+                    <div class="donation-option">
+                        <div class="option-header">
+                            <div class="option-icon-wrapper">
+                                <img src="../assets/icons/bKash.png" alt="bKash Logo" class="payment-logo">
+                            </div>
+                            <h3>bKash <span class="country-badge">Bangladesh Only</span></h3>
+                        </div>
+                        <p class="option-description">Mobile banking for Bangladeshi users. Fast and convenient local
+                            payments.</p>
+                        <button class="donate-btn secondary" id="show-bkash-qr">Show QR Code</button>
+                    </div>
+                    <div class="donation-option featured">
+                        <div class="option-header">
+                            <div class="option-icon-wrapper">
+                                <img src="../assets/icons/gumroad.png" alt="Gumroad Logo" class="payment-logo">
+                            </div>
+                            <h3>Gumroad <span class="country-badge">Global</span></h3>
+                        </div>
+                        <p class="option-description">Secure global payments with multiple payment methods available
+                            worldwide.</p>
+                        <button class="donate-btn primary" id="gumroad-donate-onetime">One time donation</button> <br>
+                        <button class="donate-btn primary" id="gumroad-donate-monthly">Monthly/Quarterly donation</button>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        
+        <!-- bKash QR Modal -->
+        <div id="bkash-qr-modal" class="modal hidden">
+            <div class="modal-overlay" id="bkash-modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2 class="modal-title">Donate via bKash</h2>
+                    <button class="modal-close" id="bkash-modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="qr-section">
+                        <p class="qr-instruction">Scan the QR code with your bKash app to donate</p>
+                        <div class="qr-code-placeholder">
+                            <img src="../assets/icons/bkash-qr.png" alt="bKash QR Code">
+                        </div>
+                        <div class="qr-steps">
+                            <p>1. Open bKash app</p>
+                            <p>2. Scan this QR code</p>
+                            <p>3. Enter your donation amount</p>
+                            <p class="autopay-note">💡 Enable autopay for recurring donations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="qr-close" class="btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Why Donate Section -->
         <section class="why-donate-section">
@@ -77,66 +139,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Donation Options Section -->
-        <section class="donation-options-section">
-            <div class="container">
-                <h2 class="section-title">Choose Your Donation Method</h2>
-                <div class="donation-options">
-                    <div class="donation-option">
-                        <div class="option-header">
-                            <div class="option-icon-wrapper">
-                                <img src="../assets/icons/bKash.png" alt="bKash Logo" class="payment-logo">
-                            </div>
-                            <h3>bKash <span class="country-badge">Bangladesh Only</span></h3>
-                        </div>
-                        <p class="option-description">Mobile banking for Bangladeshi users. Fast and convenient local
-                            payments.</p>
-                        <button class="donate-btn secondary" id="show-bkash-qr">Show QR Code</button>
-                    </div>
-                    <div class="donation-option featured">
-                        <div class="option-header">
-                            <div class="option-icon-wrapper">
-                                <img src="../assets/icons/gumroad.png" alt="Gumroad Logo" class="payment-logo">
-                            </div>
-                            <h3>Gumroad <span class="country-badge">Global</span></h3>
-                        </div>
-                        <p class="option-description">Secure global payments with multiple payment methods available
-                            worldwide.</p>
-                        <button class="donate-btn primary" id="gumroad-donate-onetime">One time donation</button> <br>
-                        <button class="donate-btn primary" id="gumroad-donate-monthly">Monthly/Quarterly donation</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- bKash QR Modal -->
-        <div id="bkash-qr-modal" class="modal hidden">
-            <div class="modal-overlay" id="bkash-modal-overlay"></div>
-            <div class="modal-container">
-                <div class="modal-header">
-                    <h2 class="modal-title">Donate via bKash</h2>
-                    <button class="modal-close" id="bkash-modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="qr-section">
-                        <p class="qr-instruction">Scan the QR code with your bKash app to donate</p>
-                        <div class="qr-code-placeholder">
-                            <img src="../assets/icons/bkash-qr.png" alt="bKash QR Code">
-                        </div>
-                        <div class="qr-steps">
-                            <p>1. Open bKash app</p>
-                            <p>2. Scan this QR code</p>
-                            <p>3. Enter your donation amount</p>
-                            <p class="autopay-note">💡 Enable autopay for recurring donations</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="qr-close" class="btn-secondary">Close</button>
-                </div>
-            </div>
-        </div>
 
         <!-- Alternative Support Section -->
         <section class="alternative-support-section">
