@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gsap.set('.release-content', { height: 0, overflow: 'hidden' });
 
+     // Open the first release item (latest version) by default
+    if (releaseItems.length > 0) {
+        const firstItem = releaseItems[0];
+        const firstContent = firstItem.querySelector('.release-content');
+        
+        firstItem.classList.add('open');
+        gsap.set(firstContent, { height: 'auto' });
+    }
+    
     releaseItems.forEach(item => {
         const header = item.querySelector('.release-header');
         const content = item.querySelector('.release-content');
