@@ -1,7 +1,7 @@
 // js/donate.js
 
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 class DonationManager {
     constructor() {
@@ -15,7 +15,7 @@ class DonationManager {
         this.setupEventListeners();
         this.initAnimations();
         this.initialized = true;
-        console.log('DonationManager initialized');
+        // console.log('DonationManager initialized');
     }
 
     setupEventListeners() {
@@ -90,29 +90,31 @@ class DonationManager {
         const modal = document.getElementById('bkash-qr-modal');
         if (modal) {
             modal.classList.remove('hidden');
-            gsap.fromTo('.modal-container',
-                { scale: 0.8, opacity: 0 }, // from values
-                {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.3,
-                    ease: 'back.out(1.7)'
-                } // to values
-            );
+            // gsap.fromTo('.modal-container',
+            //     { scale: 0.8, opacity: 0 }, // from values
+            //     {
+            //         scale: 1,
+            //         opacity: 1,
+            //         duration: 0.3,
+            //         ease: 'back.out(1.7)'
+            //     } // to values
+            // );
+
         }
     }
 
     hideBkashQR() {
         const modal = document.getElementById('bkash-qr-modal');
         if (modal) {
-            gsap.to('.modal-container', {
-                scale: 0.8,
-                opacity: 0,
-                duration: 0.2,
-                onComplete: () => {
-                    modal.classList.add('hidden');
-                }
-            });
+             modal.classList.add('hidden');
+            // gsap.to('.modal-container', {
+            //     scale: 0.8,
+            //     opacity: 0,
+            //     duration: 0.2,
+            //     onComplete: () => {
+            //         modal.classList.add('hidden');
+            //     }
+            // });
         }
     }
 
@@ -163,122 +165,138 @@ class DonationManager {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.textContent = message;
+        // notification.style.cssText = `
+        //     position: fixed;
+        //     top: 100px;
+        //     right: 20px;
+        //     background: ${type === 'success' ? '#27ae60' : '#3498db'};
+        //     color: white;
+        //     padding: 1rem 1.5rem;
+        //     border-radius: 8px;
+        //     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        //     z-index: 3000;
+        //     font-weight: 600;
+        //     max-width: 300px;
+        // `;
         notification.style.cssText = `
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: ${type === 'success' ? '#27ae60' : '#3498db'};
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 3000;
-            font-weight: 600;
-            max-width: 300px;
-        `;
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${type === 'success' ? '#27ae60' : '#3498db'};
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 3000;
+        font-weight: 600;
+        max-width: 300px;
+        animation: slideIn 0.3s ease-out;
+    `;
 
         document.body.appendChild(notification);
 
-        gsap.from(notification, {
-            x: 100,
-            opacity: 0,
-            duration: 0.3,
-            ease: 'power2.out'
-        });
+        // gsap.from(notification, {
+        //     x: 100,
+        //     opacity: 0,
+        //     duration: 0.3,
+        //     ease: 'power2.out'
+        // });
 
         setTimeout(() => {
-            gsap.to(notification, {
-                x: 100,
-                opacity: 0,
-                duration: 0.3,
-                onComplete: () => notification.remove()
-            });
+            // gsap.to(notification, {
+            //     x: 100,
+            //     opacity: 0,
+            //     duration: 0.3,
+            //     onComplete: () => notification.remove()
+            // });
+             notification.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => notification.remove(), 300);
         }, 3000);
     }
 
     initAnimations() {
         // Hero animation
-        gsap.from('.heart-icon', {
-            scale: 0,
-            opacity: 0,
-            duration: 0.6,
-            ease: 'back.out(1.7)',
-            delay: 0.2
-        });
+        // gsap.from('.heart-icon', {
+        //     scale: 0,
+        //     opacity: 0,
+        //     duration: 0.6,
+        //     ease: 'back.out(1.7)',
+        //     delay: 0.2
+        // });
 
-        gsap.from('.donate-hero .hero-title', {
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            delay: 0.4
-        });
+        // gsap.from('.donate-hero .hero-title', {
+        //     y: 30,
+        //     opacity: 0,
+        //     duration: 0.8,
+        //     delay: 0.4
+        // });
 
-        gsap.from('.donate-hero .hero-subtitle', {
-            y: 20,
-            opacity: 0,
-            duration: 0.6,
-            delay: 0.6
-        });
+        // gsap.from('.donate-hero .hero-subtitle', {
+        //     y: 20,
+        //     opacity: 0,
+        //     duration: 0.6,
+        //     delay: 0.6
+        // });
 
-        // Reason cards animation
-        gsap.utils.toArray('.reason-card').forEach((card, index) => {
-            gsap.from(card, {
-                y: 50,
-                opacity: 0,
-                duration: 0.6,
-                delay: index * 0.1,
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
+        // // Reason cards animation
+        // gsap.utils.toArray('.reason-card').forEach((card, index) => {
+        //     gsap.from(card, {
+        //         y: 50,
+        //         opacity: 0,
+        //         duration: 0.6,
+        //         delay: index * 0.1,
+        //         scrollTrigger: {
+        //             trigger: card,
+        //             start: 'top 85%',
+        //             toggleActions: 'play none none reverse'
+        //         }
+        //     });
+        // });
 
-        // Donation options animation
-        gsap.utils.toArray('.donation-option').forEach((option, index) => {
-            gsap.from(option, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 0.6,
-                delay: index * 0.2,
-                scrollTrigger: {
-                    trigger: option,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
+        // // Donation options animation
+        // gsap.utils.toArray('.donation-option').forEach((option, index) => {
+        //     gsap.from(option, {
+        //         scale: 0.9,
+        //         opacity: 0,
+        //         duration: 0.6,
+        //         delay: index * 0.2,
+        //         scrollTrigger: {
+        //             trigger: option,
+        //             start: 'top 85%',
+        //             toggleActions: 'play none none reverse'
+        //         }
+        //     });
+        // });
 
-        // Alternative support cards
-        gsap.utils.toArray('.alt-support-card').forEach((card, index) => {
-            gsap.from(card, {
-                y: 40,
-                opacity: 0,
-                duration: 0.6,
-                delay: index * 0.1,
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
+        // // Alternative support cards
+        // gsap.utils.toArray('.alt-support-card').forEach((card, index) => {
+        //     gsap.from(card, {
+        //         y: 40,
+        //         opacity: 0,
+        //         duration: 0.6,
+        //         delay: index * 0.1,
+        //         scrollTrigger: {
+        //             trigger: card,
+        //             start: 'top 85%',
+        //             toggleActions: 'play none none reverse'
+        //         }
+        //     });
+        // });
 
-        // Thank you card animation
-        gsap.from('.thank-you-card', {
-            scale: 0.9,
-            opacity: 0,
-            duration: 0.8,
-            scrollTrigger: {
-                trigger: '.thank-you-card',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-            }
-        });
+        // // Thank you card animation
+        // gsap.from('.thank-you-card', {
+        //     scale: 0.9,
+        //     opacity: 0,
+        //     duration: 0.8,
+        //     scrollTrigger: {
+        //         trigger: '.thank-you-card',
+        //         start: 'top 85%',
+        //         toggleActions: 'play none none reverse'
+        //     }
+        // });
 
         // Button hover effects
-        this.initButtonEffects();
+        // this.initButtonEffects();
     }
 
     initButtonEffects() {
@@ -286,19 +304,19 @@ class DonationManager {
 
         buttons.forEach(button => {
             button.addEventListener('mouseenter', function () {
-                gsap.to(this, {
-                    scale: 1.05,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
+                // gsap.to(this, {
+                //     scale: 1.05,
+                //     duration: 0.3,
+                //     ease: 'power2.out'
+                // });
             });
 
             button.addEventListener('mouseleave', function () {
-                gsap.to(this, {
-                    scale: 1,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
+                // gsap.to(this, {
+                //     scale: 1,
+                //     duration: 0.3,
+                //     ease: 'power2.out'
+                // });
             });
         });
     }
