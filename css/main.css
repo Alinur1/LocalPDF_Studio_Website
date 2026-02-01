@@ -92,7 +92,6 @@ body {
   width: 0;
   height: 2px;
   background: var(--accent-blue);
-  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
@@ -187,7 +186,7 @@ body {
 }
 
 .hero-content {
-  opacity: 0;
+  opacity: 1;
 }
 
 .hero-title {
@@ -249,7 +248,6 @@ body {
   align-items: center;
   gap: 0.75rem;
   margin-top: 2rem;
-  animation: fadeInUp 1.2s ease-out 1s both;
 }
 
 .downloads-label {
@@ -310,7 +308,7 @@ body {
 .hero-visual {
   position: relative;
   height: 600px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .pdf-cards {
@@ -408,8 +406,7 @@ section {
   border-radius: 12px;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
 }
 
 .feature-card:hover {
@@ -452,8 +449,7 @@ section {
   text-align: center;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: scale(0.9);
+  opacity: 1;
 }
 
 .why-card:hover {
@@ -496,7 +492,7 @@ section {
   text-align: center;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  opacity: 0;
+  opacity: 1;
 }
 
 .tech-item:hover {
@@ -542,8 +538,7 @@ section {
   text-align: center;
   border: 2px solid var(--border-color);
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: scale(0.95);
+  opacity: 1;
 }
 
 .download-card.recommended {
@@ -862,40 +857,7 @@ section {
   }
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+/* Animations removed */
 
 /* Smooth Scrollbar */
 ::-webkit-scrollbar {
@@ -1153,37 +1115,11 @@ section {
 }
 
 
-/* Animate-in class for scroll animations */
-.animate-in {
-    animation: fadeInUp 0.6s ease-out forwards !important;
-}
-
-.feature-card,
-.why-card,
-.tech-item,
-.download-card {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
+/* Animation classes removed */
 .section-title {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section-title.animate-in {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .video-showcase {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.video-showcase.animate-in {
     opacity: 1;
-    transform: translateY(0);
 }

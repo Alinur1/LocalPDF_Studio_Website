@@ -14,19 +14,6 @@
 .shield-icon {
     font-size: 5rem;
     margin-bottom: 1.5rem;
-    animation: shieldPulse 2s ease-in-out infinite;
-}
-
-@keyframes shieldPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
 }
 
 .privacy-hero .hero-title {
