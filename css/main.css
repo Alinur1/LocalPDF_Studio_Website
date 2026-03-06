@@ -250,17 +250,6 @@ body {
   margin-top: 2rem;
 }
 
-.downloads-label {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: 0;
-  font-weight: 500;
-}
-
-.downloads-badge img {
-  filter: brightness(1.1);
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
