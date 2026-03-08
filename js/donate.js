@@ -26,14 +26,9 @@ class DonationManager {
             bkashBtn.addEventListener('click', () => this.showBkashQR());
         }
 
-        const gumroadOneTimeBtn = document.getElementById('gumroad-donate-onetime');
-        if (gumroadOneTimeBtn) {
-            gumroadOneTimeBtn.addEventListener('click', () => this.openOnetimeGumroad());
-        }
-
-        const gumroadMonthlyBtn = document.getElementById('gumroad-donate-monthly');
-        if (gumroadMonthlyBtn) {
-            gumroadMonthlyBtn.addEventListener('click', () => this.openMonthlyGumroad());
+        const patreonBtn = document.getElementById('patreon-donate');
+        if (patreonBtn) {
+            patreonBtn.addEventListener('click', () => this.openPatreon());
         }
 
         const fundraisingBtn = document.getElementById('show-fundraising-sheet');
@@ -96,12 +91,8 @@ class DonationManager {
         }
     }
 
-    openOnetimeGumroad() {
-        this.openExternal('https://alinur3.gumroad.com/coffee');
-    }
-
-    openMonthlyGumroad() {
-        this.openExternal('https://alinur3.gumroad.com/l/csbhxr');
+    openPatreon() {
+        this.openExternal('https://www.patreon.com/cw/MdAlinurHossain?vanity=MdAlinurHossain');
     }
 
     async shareApp() {
