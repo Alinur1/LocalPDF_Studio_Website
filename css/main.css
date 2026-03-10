@@ -64,6 +64,11 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logo-icon {
@@ -100,6 +105,61 @@ body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Release Notification Bar */
+.release-notification-bar {
+  background: rgba(15, 20, 26, 0.95);
+  padding: 0.75rem 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: #d1d5db;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 8px;
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-width: 600px;
+  width: calc(100% - 40px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.release-notification-bar:hover {
+  background: rgba(15, 20, 26, 1);
+  border-color: rgba(52, 211, 153, 0.6);
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.2);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.notification-dot {
+  width: 7px;
+  height: 7px;
+  background: #34d399;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.notification-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #9ca3af;
 }
 
 /* Mobile Menu Button */
@@ -143,7 +203,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 120px 0 80px;
+  padding: 160px 0 80px;
   overflow: hidden;
 }
 
