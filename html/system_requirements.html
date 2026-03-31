@@ -1,0 +1,267 @@
+<!-- html/system_requirements.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Requirements</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/app_icon.ico" />
+    <link rel="canonical" href="https://alinur1.github.io/LocalPDF_Studio_Website/html/system_requirements.html" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/system_requirements.css" />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSRC0CKFGN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XSRC0CKFGN');
+</script>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <img src="../assets/icons/app_icon.ico" class="logo-icon">
+                <span class="logo-text">LocalPDF Studio</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-minimal">
+        <div class="hero-background"></div>
+        <div class="container hero-container-minimal">
+            <div class="hero-content" style="text-align: center; max-width: 800px;">
+                <h1 class="hero-title-minimal">System Requirements</h1>
+                <p class="hero-subtitle">Check compatibility with your device to ensure LocalPDF Studio runs smoothly
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements Sections -->
+    <section class="requirements-section" id="windows">
+        <div class="container">
+            <div class="requirements-grid">
+                <!-- Windows -->
+                <div class="requirements-card">
+                    <div class="req-header">
+                        <div class="req-icon">🪟</div>
+                        <h2>Windows</h2>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <strong>Operating System:</strong> Windows 10 (Version 22H2) or later.
+                        </li>
+                        <li>
+                            <strong>Architecture:</strong> 64-bit (x64) only.
+                        </li>
+                        <li>
+                            <strong>Processor:</strong> Intel or AMD CPU.
+                        </li>
+                    </ul>
+                    <div class="req-note">
+                        <strong>Note:</strong> Windows 7 and 8.1 are not officially supported due to Electron/Chromium
+                        limitations.
+                    </div>
+                </div>
+
+                <!-- Linux Snap -->
+                <div class="requirements-card">
+                    <div class="req-header">
+                        <div class="req-icon">🐧</div>
+                        <h2>Linux - Snap Package</h2>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <strong>Compatibility:</strong> Works on all major distributions supporting snapd (Ubuntu,
+                            Fedora, Debian, Mint, Manjaro, etc.).
+                        </li>
+                        <li>
+                            <strong>Architecture:</strong> 64-bit (x64) only.
+                        </li>
+                        <li>
+                            <strong>Processor:</strong> Intel or AMD CPU.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Linux AppImage -->
+                <div class="requirements-card">
+                    <div class="req-header">
+                        <div class="req-icon">🐧</div>
+                        <h2>Linux - AppImage (Portable)</h2>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <strong>Minimum Base:</strong> Ubuntu 20.04 (or equivalent).
+                        </li>
+                        <li>
+                            <strong>Distro Compatibility:</strong>
+                            <ul class="nested-list">
+                                <li>Debian: 11 (Bullseye) or later.</li>
+                                <li>Fedora: 32 or later.</li>
+                                <li>Linux Mint: 20 or later.</li>
+                                <li>Arch Linux: Most recent versions (Rolling release).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Dependencies:</strong> Requires Python 3.8.10 or higher (pre-installed on most
+                            modern distros).
+                        </li>
+                        <li>
+                            <strong>Architecture:</strong> 64-bit (x64) only.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- macOS -->
+                <div class="requirements-card">
+                    <div class="req-header">
+                        <div class="req-icon">🍎</div>
+                        <h2>macOS</h2>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <strong>Operating System:</strong> macOS 13 (Ventura) or later.
+                        </li>
+                        <li>
+                            <strong>Architecture:</strong> Intel (x64) Native.
+                        </li>
+                        <li>
+                            <strong>Apple Silicon (M1/M2/M3/M4):</strong> Supported via Rosetta 2 translation.
+                        </li>
+                    </ul>
+                    <div class="req-note">
+                        <strong>Note:</strong> Native ARM64 support is currently not included; please ensure Rosetta is
+                        installed.
+                    </div>
+                </div>
+
+                <!-- Hardware General -->
+                <div class="requirements-card">
+                    <div class="req-header">
+                        <div class="req-icon">⚙️</div>
+                        <h2>General requirements</h2>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <strong>Third party software:</strong> <a href="https://ghostscript.com/"
+                                target="_blank">Ghostscript</a> is needed to be installed. <strong>Tutorial:</strong> <a
+                                href="https://youtu.be/fKrnSytg_z4" target="_blank">https://youtu.be/fKrnSytg_z4</a>
+                        </li>
+                        <li>
+                            <strong>RAM:</strong> 500MB minimum (2GB+ recommended for large PDF processing).
+                        </li>
+                        <li>
+                            <strong>Disk Space:</strong> ~700MB for installation + additional space for temporary file
+                            processing.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Notice Section -->
+    <section class="security-notice-section">
+        <div class="container">
+            <div class="security-notice">
+                <h2>Security & "Unsigned" Software Notice</h2>
+                <p>LocalPDF Studio is 100% open-source and private. However, because I am an independent developer and
+                    not a massive corporation, this software is currently not digitally signed by Microsoft or Apple.
+                </p>
+                <p>Signing certificates cost hundreds of dollars every year—money that currently comes out of my own
+                    pocket. Until the project is fully funded, you will see security warnings during installation.</p>
+
+                <h3>Help Me Get Signed!</h3>
+                <p>If you want to see LocalPDF Studio officially recognized by Windows and macOS, please consider a
+                    donation. Your support goes toward:</p>
+                <ul class="notice-list">
+                    <li>Microsoft Developer Certificate (Stops SmartScreen warnings).</li>
+                    <li>Apple Developer Program (Stops Gatekeeper "Blocked" messages).</li>
+                    <li>Project Infrastructure (Keeping the toolkit 100% free and offline).</li>
+                </ul>
+                <p><a href="../html/donate.html" class="notice-link">Donate</a></p>
+
+                <h3>How to Install (Manual Bypass)</h3>
+
+                <h4>For Windows Users</h4>
+                <ol class="notice-steps">
+                    <li>Run the installer.</li>
+                    <li>When Windows Defender SmartScreen pops up, click "More info".</li>
+                    <li>Click "Run anyway".</li>
+                </ol>
+
+                <h4>For macOS Users</h4>
+                <ol class="notice-steps">
+                    <li>Install the .dmg and drag the app to your Applications folder.</li>
+                    <li>Go to System Settings → Privacy & Security.</li>
+                    <li>Scroll down to the Security section.</li>
+                    <li>You will see: "LocalPDF Studio was blocked because it is not from an identified developer."</li>
+                    <li>Click "Open Anyway" and confirm with your password.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER HTML -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/icons/app_icon.ico" class="logo-icon">
+                    <span class="logo-text">LocalPDF Studio</span>
+                </div>
+                <p class="footer-text">Free, Open Source, Privacy-Focused PDF Toolkit</p>
+                <p class="footer-license">AGPL 3.0 (GNU Affero General Public License version 3)</p>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61587042059878" target="_blank"
+                        rel="noopener noreferrer" class="social-link" title="Follow us on Facebook">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://github.com/Alinur1/LocalPDF_Studio" target="_blank" rel="noopener noreferrer"
+                        class="social-link" title="Star us on GitHub">
+                        <img src="../assets/icons/github.svg" alt="GitHub"
+                            style="width: 30px; height: 30px; filter: invert(1);">
+                    </a>
+                    <a href="https://www.reddit.com/r/localpdf_studio/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" title="Join us on Reddit">
+                        <img src="../assets/icons/reddit.svg" alt="Reddit" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://www.instagram.com/localpdf_studio/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" title="Follow us on Instagram">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram" style="width: 30px; height: 30px;">
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://www.flaticon.com/free-icon/pdf_8243027?term=pdf&page=1&position=90&origin=tag&related_id=8243027"
+                        title="pdf icons" target="_blank" rel="noopener noreferrer">PDF icons by mpanicon - Flaticon</a>
+                    <span class="footer-divider">|</span>
+                    <a href="https://github.com/Alinur1/LocalPDF_Studio/issues" target="_blank"
+                        rel="noopener noreferrer">Report Issues</a>
+                    <span class="footer-divider">|</span>
+                    <a href="html/donate.html">Support</a>
+                </div>
+
+                <p class="footer-copyright">© 2026 LocalPDF Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

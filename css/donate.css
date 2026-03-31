@@ -89,20 +89,6 @@
   line-height: 1.6;
 }
 
-.appreciation-message {
-  text-align: center;
-  padding: 2rem;
-  background: var(--card-bg);
-  border-radius: 12px;
-  border: 2px solid var(--accent-blue);
-}
-
-.appreciation-message p {
-  font-size: 1.5rem;
-  color: var(--accent-blue);
-  font-weight: 600;
-}
-
 /* Donation Options */
 .donation-options-section {
   padding: 80px 0;
@@ -664,27 +650,6 @@
 .payment-logo {
   height: 40px;
   width: auto;
-}
-.donation-action-btn {
-  background: var(--accent-blue);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-.payment-logo {
-    height: 40px;
-    width: auto;
-  }
-  font-size: 1rem;
-  font-weight: 60;
-}
-
-.donation-action-btn:hover {
-  background: #2980b9;
-  transform: translateY(-2px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
 }
 
 @keyframes modalFadeIn {

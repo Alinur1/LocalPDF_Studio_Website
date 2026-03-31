@@ -1,0 +1,370 @@
+/* css/system_requirements.css */
+
+.hero-minimal {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 160px 0 60px;
+    overflow: hidden;
+}
+
+.hero-container-minimal {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title-minimal {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Requirements Section */
+.requirements-section {
+    background: var(--secondary-bg);
+    padding: 80px 0;
+    position: relative;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.requirements-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.requirements-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+
+.req-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.req-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.req-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.req-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.req-list li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.req-list li::before {
+  content: "✓";
+  color: var(--success);
+  font-weight: bold;
+  margin-right: 0.75rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.req-list a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  word-break: break-word;
+}
+
+.req-list a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.req-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nested-list li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.nested-list li::before {
+    content: "→";
+    color: var(--accent-blue);
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.req-note {
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--accent-blue);
+    padding: 1rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.req-note strong {
+    color: var(--text-primary);
+}
+
+/* Security Notice Section */
+.security-notice-section {
+  background: var(--primary-bg);
+  padding: 80px 0;
+  position: relative;
+}
+
+.security-notice {
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(230, 126, 34, 0.05) 100%);
+  border-left: 5px solid #e67e22;
+  border-radius: 8px;
+  padding: 3rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.security-notice h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  margin-top: 0;
+}
+
+.security-notice h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin: 2rem 0 1rem 0;
+  margin-top: 2rem;
+}
+
+.security-notice h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 1.5rem 0 0.75rem 0;
+  margin-top: 1.5rem;
+}
+
+.security-notice p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.notice-list li {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.notice-list li::before {
+  content: "•";
+  color: #e67e22;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.notice-steps {
+  list-style: decimal;
+  padding-left: 2rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.notice-steps li {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.notice-link {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.notice-link:hover {
+  border-bottom-color: #e67e22;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title-minimal {
+        font-size: 2rem;
+    }
+
+    .requirements-section {
+        padding: 60px 0;
+    }
+
+    .requirements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .requirements-card {
+        padding: 2rem;
+    }
+
+    .req-header {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .req-icon {
+        font-size: 2.5rem;
+    }
+
+    .req-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .info-box {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .info-icon {
+        font-size: 2rem;
+    }
+
+    .info-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .security-notice {
+        padding: 2rem;
+    }
+
+    .security-notice h2 {
+        font-size: 1.5rem;
+    }
+
+    .security-notice h3 {
+        font-size: 1.1rem;
+    }
+
+    .security-notice h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-minimal {
+        padding: 120px 0 40px;
+    }
+
+    .hero-title-minimal {
+        font-size: 1.75rem;
+    }
+
+    .requirements-card {
+        padding: 1.5rem;
+    }
+
+    .req-header {
+        margin-bottom: 1.25rem;
+    }
+
+    .req-icon {
+        font-size: 2rem;
+    }
+
+    .req-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .req-note {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .info-box {
+        padding: 1.5rem;
+    }
+
+    .security-notice {
+        padding: 1.5rem;
+    }
+
+    .security-notice h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .security-notice h3 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .security-notice h4 {
+        font-size: 0.95rem;
+    }
+
+    .notice-list li,
+    .notice-steps li {
+        font-size: 0.9rem;
+    }
+}
