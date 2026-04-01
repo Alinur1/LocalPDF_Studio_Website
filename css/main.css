@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'NotoEmoji';
-  src: url('/assets/NotoColorEmoji-Regular.ttf') format('truetype');
+  src: url('assets/NotoColorEmoji-Regular.ttf') format('truetype');
   unicode-range: U+1F300-1F9FF, U+2600-26FF, U+2700-27BF, U+1F600-1F64F;
   font-display: swap;
 }
