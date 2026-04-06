@@ -12,7 +12,6 @@
 }
 
 .shield-icon {
-    font-size: 5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -93,11 +92,11 @@
     box-shadow: 0 10px 40px rgba(52, 152, 219, 0.4);
 }
 
-.list-icon {
+/* .list-icon {
     font-size: 2.5rem;
     flex-shrink: 0;
     line-height: 1;
-}
+} */
 
 .list-content {
     flex-grow: 1;

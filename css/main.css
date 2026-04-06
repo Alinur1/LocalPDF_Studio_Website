@@ -296,7 +296,7 @@ body {
 }
 
 .feature-icon {
-  font-size: 1.5rem;
+  font-size: 0.1rem;
 }
 
 .cta-buttons {
@@ -467,10 +467,10 @@ section {
   box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
 }
 
-.feature-icon-wrapper {
+/* .feature-icon-wrapper {
   font-size: 3rem;
   margin-bottom: 1rem;
-}
+} */
 
 .feature-card h3 {
   font-size: 1.25rem;
@@ -511,7 +511,6 @@ section {
 }
 
 .why-icon {
-  font-size: 4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -552,12 +551,13 @@ section {
   border-color: var(--accent-blue);
 }
 
-.tech-icon-wrapper {
-  margin-bottom: 1rem;
+.tech-icon {
+  height: 30%;
+  width: 30%;
 }
 
-.tech-emoji {
-  font-size: 3rem;
+.tech-icon-wrapper {
+  margin-bottom: 1rem;
 }
 
 .tech-item h4 {
@@ -602,11 +602,6 @@ section {
   transform: scale(1.05);
   border-color: var(--accent-blue);
   box-shadow: 0 15px 40px rgba(52, 152, 219, 0.3);
-}
-
-.platform-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
 }
 
 .download-card h3 {
