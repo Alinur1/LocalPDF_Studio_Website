@@ -63,13 +63,6 @@
     border-bottom: 2px solid var(--border-color);
 }
 
-.req-icon {
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .req-header h2 {
     font-size: 1.5rem;
     color: var(--text-primary);
