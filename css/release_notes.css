@@ -1,5 +1,9 @@
 /* css/release_notes.css */
 
+a {
+  color: var(--text-primary);
+}
+
 .release-notes-page .release-notes-hero {
     padding: 120px 0 60px;
     text-align: center;
