@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alinur1.github.io/LocalPDF_Studio_Website/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>https://alinur1.github.io/LocalPDF_Studio_Website/html/release_notes.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://alinur1.github.io/LocalPDF_Studio_Website/html/donate.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://alinur1.github.io/LocalPDF_Studio_Website/html/privacy_policy.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://alinur1.github.io/LocalPDF_Studio_Website/html/system_requirements.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>
