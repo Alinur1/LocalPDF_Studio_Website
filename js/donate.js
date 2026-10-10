@@ -21,9 +21,9 @@ class DonationManager {
     }
 
     setupDonationHandlers() {
-        const bkashBtn = document.getElementById('show-bkash-qr');
-        if (bkashBtn) {
-            bkashBtn.addEventListener('click', () => this.showBkashQR());
+        const supportkoriBtn = document.getElementById('show-supportkori-qr');
+        if (supportkoriBtn) {
+            supportkoriBtn.addEventListener('click', () => this.showSupportKoriQR());
         }
 
         const patreonBtn = document.getElementById('patreon-donate');
@@ -49,37 +49,37 @@ class DonationManager {
     }
 
     setupQRModal() {
-        const qrModal = document.getElementById('bkash-qr-modal');
+        const qrModal = document.getElementById('supportkori-qr-modal');
         if (!qrModal) return;
 
         const closeHandlers = [
             document.getElementById('qr-close'),
-            document.getElementById('bkash-modal-close'),
-            document.getElementById('bkash-modal-overlay')
+            document.getElementById('supportkori-modal-close'),
+            document.getElementById('supportkori-modal-overlay')
         ];
 
         closeHandlers.forEach(handler => {
             if (handler) {
-                handler.addEventListener('click', () => this.hideBkashQR());
+                handler.addEventListener('click', () => this.hideSupportKoriQR());
             }
         });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && qrModal && !qrModal.classList.contains('hidden')) {
-                this.hideBkashQR();
+                this.hideSupportKoriQR();
             }
         });
     }
 
-    showBkashQR() {
-        const modal = document.getElementById('bkash-qr-modal');
+    showSupportKoriQR() {
+        const modal = document.getElementById('supportkori-qr-modal');
         if (modal) {
             modal.classList.remove('hidden');
         }
     }
 
-    hideBkashQR() {
-        const modal = document.getElementById('bkash-qr-modal');
+    hideSupportKoriQR() {
+        const modal = document.getElementById('supportkori-qr-modal');
         if (modal) {
             modal.classList.add('hidden');
         }
