@@ -15,21 +15,7 @@ class DonationManager {
     }
 
     setupEventListeners() {
-        this.setupDonationHandlers();
         this.setupSupportHandlers();
-        this.setupQRModal();
-    }
-
-    setupDonationHandlers() {
-        const supportkoriBtn = document.getElementById('show-supportkori-qr');
-        if (supportkoriBtn) {
-            supportkoriBtn.addEventListener('click', () => this.showSupportKoriQR());
-        }
-
-        const patreonBtn = document.getElementById('patreon-donate');
-        if (patreonBtn) {
-            patreonBtn.addEventListener('click', () => this.openPatreon());
-        }
     }
 
     setupSupportHandlers() {
@@ -46,47 +32,6 @@ class DonationManager {
                 element.addEventListener('click', action);
             }
         });
-    }
-
-    setupQRModal() {
-        const qrModal = document.getElementById('supportkori-qr-modal');
-        if (!qrModal) return;
-
-        const closeHandlers = [
-            document.getElementById('qr-close'),
-            document.getElementById('supportkori-modal-close'),
-            document.getElementById('supportkori-modal-overlay')
-        ];
-
-        closeHandlers.forEach(handler => {
-            if (handler) {
-                handler.addEventListener('click', () => this.hideSupportKoriQR());
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && qrModal && !qrModal.classList.contains('hidden')) {
-                this.hideSupportKoriQR();
-            }
-        });
-    }
-
-    showSupportKoriQR() {
-        const modal = document.getElementById('supportkori-qr-modal');
-        if (modal) {
-            modal.classList.remove('hidden');
-        }
-    }
-
-    hideSupportKoriQR() {
-        const modal = document.getElementById('supportkori-qr-modal');
-        if (modal) {
-            modal.classList.add('hidden');
-        }
-    }
-
-    openPatreon() {
-        this.openExternal('https://www.patreon.com/cw/MdAlinurHossain?vanity=MdAlinurHossain');
     }
 
     async shareApp() {
